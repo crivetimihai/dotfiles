@@ -1,0 +1,162 @@
+# set shell
+set -g default-shell /usr/bin/zsh
+
+bind-key j command-prompt -p "join pane from:"  "join-pane -s '%%'"
+bind-key s command-prompt -p "send pane to:"  "join-pane -t '%%'"
+
+# Set the prefix to ^A.
+unbind C-b
+set -g prefix ^T
+bind t send-prefix
+
+# other ^A
+unbind ^T
+bind ^T last-window
+
+# Bind appropriate commands similar to screen.
+# lockscreen ^X x
+unbind ^X
+bind ^X lock-server
+unbind x
+bind x lock-server
+
+# screen ^C c
+unbind ^C
+bind ^C new-window
+unbind c
+bind c new-window
+
+# detach ^D d
+unbind ^D
+bind ^D detach
+
+# displays *
+unbind *
+bind * list-clients
+
+# next ^@ ^N sp n
+unbind ^@
+bind ^@ next-window
+unbind ^N
+bind ^N next-window
+unbind " "
+bind " " next-window
+unbind n
+bind n next-window
+
+# title A
+unbind A
+bind A command-prompt "rename-window %%"
+
+# prev ^H ^P p ^?
+unbind ^H
+bind ^H previous-window
+unbind ^P
+bind ^P previous-window
+unbind p
+bind p previous-window
+unbind BSpace
+bind BSpace previous-window
+
+# windows ^W w
+unbind ^W
+bind ^W list-windows
+unbind w
+bind w list-windows
+
+# quit \
+unbind '\'
+bind '\' confirm-before "kill-server"
+
+# kill K k
+unbind K
+bind K confirm-before "kill-window"
+unbind k
+bind k confirm-before "kill-window"
+
+# redisplay ^L l
+unbind ^L
+bind ^L refresh-client
+unbind l
+bind l refresh-client
+
+# split -v |
+unbind |
+bind | split-window
+
+# :kB: focus up
+unbind Tab
+bind Tab select-pane -t:.+
+unbind BTab
+bind BTab select-pane -t:.-
+
+# " windowlist -b
+unbind '"'
+bind '"' choose-window
+
+# color
+set -g default-terminal "screen-256color"
+#set -g default-terminal "screen"
+#set -g terminal-overrides 'xterm*:smcup@:rmcup@:colors=256'
+set-option -g status-bg colour235 #base02
+set-option -g status-fg colour136 #yellow
+set-option -g status-attr default
+
+# default window title colors
+set -g mode-style bg=default,fg=colour244
+set-window-option -g window-status-fg colour244 #base0
+set-window-option -g window-status-bg default
+#set-window-option -g window-status-attr dim
+
+# active window title colors
+set-window-option -g window-status-current-fg colour166 #orange
+set-window-option -g window-status-current-bg default
+set-window-option -g window-status-current-attr bright
+
+# pane border
+set-option -g pane-border-fg colour235 #base02
+set-option -g pane-active-border-fg colour240 #base01
+
+# message text
+set-option -g message-bg colour235 #base02
+set-option -g message-fg colour166 #orange
+
+# pane number display
+set-option -g display-panes-active-colour colour33 #blue
+set-option -g display-panes-colour colour166 #orange
+# clock
+set-window-option -g clock-mode-colour green #green
+
+# set window list colors - red for active and cyan for inactive
+set-window-option -g window-status-fg white #base0
+set-window-option -g window-status-bg colour236
+set-window-option -g window-status-attr bright
+
+set-window-option -g window-status-current-fg blue #orange
+set-window-option -g window-status-current-bg green
+set-window-option -g window-status-current-attr bright
+
+set -g status-interval 1
+set -g status-right-length 140
+set -g status-right '#[fg=red,bright,bg=default]#H #[fg=green,bright]%a %Y-%m-%d %H:%M '
+
+# Allows for faster key repetition
+set -s escape-time 0
+
+setw -g aggressive-resize on
+
+# Activity monitoring
+setw -g monitor-activity on
+set -g visual-activity off
+
+# Vi copypaste mode
+set-window-option -g mode-keys vi
+
+bind-key C command-prompt -p "Name of new window: " "new-window -n '%%'"
+
+# reload config
+bind r source-file ~/.tmux.conf \; display-message "Config reloaded..."
+
+# auto window rename
+set-window-option -g automatic-rename
+
