@@ -16,7 +16,7 @@
     "d-formatter": "",
     "dart-formatter": "",
     "elm-formatter": "",
-    "eofnewline": false,
+    "eofnewline": true,
     "fastdirty": true,
     "fileformat": "unix",
     "filemanager-compressparent": true,
