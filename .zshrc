@@ -41,11 +41,9 @@ export GROFF_NO_SGR=1                  # for konsole and gnome-terminal'
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/go/bin:/usr/local/bin:$PATH
 
-# Customizations
-export EDITOR=nvim
-alias emacs='flatpak run org.gnu.emacs'
-alias vboxmanage='VBoxManage'
-
 # Bash-like navigation
 autoload -U select-word-style
 select-word-style bash
+
+# Source local customizations
+source ~/.zshrc.local

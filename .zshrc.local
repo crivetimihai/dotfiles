@@ -1,0 +1,5 @@
+# Customizations
+export EDITOR=nvim
+alias vboxmanage='VBoxManage'
+alias vim='nvim'
+alias c='clear'
