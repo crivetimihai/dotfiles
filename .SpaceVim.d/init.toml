@@ -39,4 +39,3 @@ default_height = 30
 [[custom_plugins]]
 name = "chase/vim-ansible-yaml"
 merged = 0
-

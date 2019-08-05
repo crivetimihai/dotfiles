@@ -44,7 +44,7 @@
     "CtrlK":          "CutLine",
     "CtrlD":          "DuplicateLine",
     "CtrlV":          "Paste",
-    "Alt-a":           "SelectAll",
+    "Alt-A":          "SelectAll",
     "CtrlT":          "AddTab",
     "Alt,":           "PreviousTab",
     "Alt.":           "NextTab",
