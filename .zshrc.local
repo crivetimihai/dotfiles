@@ -1,5 +1,6 @@
 # Customizations
 export EDITOR=nvim
+export VIEWER=micro
 alias vboxmanage='VBoxManage'
 alias vim='nvim'
 alias c='clear'
