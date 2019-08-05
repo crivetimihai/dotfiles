@@ -41,7 +41,7 @@
     "CtrlY":          "Redo",
     "CtrlC":          "Copy",
     "CtrlX":          "Cut",
-    "CtrlK":          "CutLine",
+    "CtrlK":          "SelectToEndOfLine,Cut",
     "CtrlD":          "DuplicateLine",
     "CtrlV":          "Paste",
     "Alt-A":          "SelectAll",
@@ -73,6 +73,7 @@
     "Alt-<": "CursorStart",
     "Alt->": "CursorEnd",
     "Alt-/": "comment.comment",
+    "Alt-j": "EndOfLine,Delete",
 
     // Integration with file managers
     "F1":  "ToggleHelp",

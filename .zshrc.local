@@ -4,3 +4,4 @@ export VIEWER=micro
 alias vboxmanage='VBoxManage'
 alias vim='nvim'
 alias c='clear'
+alias m='micro'
