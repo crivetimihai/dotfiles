@@ -44,7 +44,7 @@
     "CtrlK":          "CutLine",
     "CtrlD":          "DuplicateLine",
     "CtrlV":          "Paste",
-    "CtrlA":          "SelectAll",
+    "Alt-a":           "SelectAll",
     "CtrlT":          "AddTab",
     "Alt,":           "PreviousTab",
     "Alt.":           "NextTab",
@@ -60,7 +60,7 @@
     "Delete":         "Delete",
     "CtrlB":          "ShellMode",
     "CtrlQ":          "Quit",
-    "CtrlE":          "CommandMode",
+    "Alt-e":          "CommandMode",
     "CtrlW":          "NextSplit",
     "CtrlU":          "ToggleMacro",
     "CtrlJ":          "PlayMacro",
@@ -68,8 +68,11 @@
     // Emacs-style keybindings
     "Alt-f": "WordRight",
     "Alt-b": "WordLeft",
-    "Alt-a": "StartOfLine",
-    "Alt-e": "EndOfLine",
+    "Ctrl-a": "StartOfLine",
+    "Ctrl-e": "EndOfLine",
+    "Alt-<": "CursorStart",
+    "Alt->": "CursorEnd",
+    "Alt-/": "comment.comment",
 
     // Integration with file managers
     "F1":  "ToggleHelp",
@@ -94,4 +97,3 @@
     "Alt-c": "RemoveAllMultiCursors",
     "Alt-x": "SkipMultiCursor",
 }
-

@@ -33,6 +33,7 @@
     "scrollbar": false,
     "scrollmargin": 3,
     "scrollspeed": 2,
+    "smartpaste": true,
     "softwrap": false,
     "splitbottom": true,
     "splitright": true,
@@ -43,5 +44,6 @@
     "tabsize": 4,
     "tabstospaces": false,
     "termtitle": false,
+    "trimdiff": false,
     "useprimary": true
 }
