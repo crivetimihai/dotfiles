@@ -27,7 +27,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
 # Fix weird ^W bahaviour
-bindkey '^W' vi-backward-kill-word
+bindkey  "^W"      vi-backward-kill-word
+bindkey  "^[[1~"   beginning-of-line
+bindkey  "^[[4~"   end-of-line
 
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
 export LESS_TERMCAP_md=$'\E[1;36m'     # begin blink
