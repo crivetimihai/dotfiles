@@ -2,6 +2,9 @@
 
 # -- windows & pane creation ---------------------------------------------------
 
+# Create a new session
+new-session
+
 # new window retains current path, possible values are:
 #   - true
 #   - false (default)
@@ -301,13 +304,13 @@ unbind ^T
 bind ^T last-window
 
 # Bind appropriate commands similar to screen.
-# lockscreen ^X x 
+# lockscreen ^X x
 unbind ^X
 bind ^X lock-server
 unbind x
 bind x lock-server
 
-# screen ^C c 
+# screen ^C c
 unbind ^C
 bind ^C new-window
 unbind c
@@ -317,11 +320,11 @@ bind c new-window
 unbind ^D
 bind ^D detach
 
-# displays * 
+# displays *
 unbind *
 bind * list-clients
 
-# next ^@ ^N sp n 
+# next ^@ ^N sp n
 unbind ^@
 bind ^@ next-window
 unbind ^N
@@ -335,7 +338,7 @@ bind n next-window
 unbind A
 bind A command-prompt "rename-window %%"
 
-# prev ^H ^P p ^? 
+# prev ^H ^P p ^?
 unbind ^H
 bind ^H previous-window
 unbind ^P
@@ -345,23 +348,23 @@ bind p previous-window
 unbind BSpace
 bind BSpace previous-window
 
-# windows ^W w 
+# windows ^W w
 unbind ^W
 bind ^W list-windows
 unbind w
 bind w list-windows
 
-# quit \ 
+# quit \
 unbind '\'
 bind '\' confirm-before "kill-server"
 
-# kill K k 
+# kill K k
 unbind K
 bind K confirm-before "kill-window"
 unbind k
 bind k confirm-before "kill-window"
 
-# redisplay ^L l 
+# redisplay ^L l
 unbind ^L
 bind ^L refresh-client
 unbind l
@@ -385,8 +388,8 @@ bind '"' choose-window
 # Allows for faster key repetition
 set -s escape-time 0
 
-# Rather than constraining window size to the maximum size of any client 
-# connected to the *session*, constrain window size to the maximum size of any 
+# Rather than constraining window size to the maximum size of any client
+# connected to the *session*, constrain window size to the maximum size of any
 # client connected to *that window*. Much more reasonable.
 setw -g aggressive-resize on
 # Activity monitoring

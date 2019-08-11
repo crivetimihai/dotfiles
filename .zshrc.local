@@ -1,7 +1,12 @@
 # Customizations
 export EDITOR=nvim
 export VIEWER=micro
+
+# Aliases
 alias vboxmanage='VBoxManage'
 alias vim='nvim'
 alias c='clear'
 alias m='micro'
+
+# Set the PATH
+export PATH=$HOME/bin:$HOME/go/bin:$HOME/node_modules/.bin:/usr/local/bin:$PATH

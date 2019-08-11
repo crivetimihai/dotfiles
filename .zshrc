@@ -40,9 +40,6 @@ export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 export GROFF_NO_SGR=1                  # for konsole and gnome-terminal'
 
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/go/bin:/usr/local/bin:$PATH
-
 # Bash-like navigation
 autoload -U select-word-style
 select-word-style bash
