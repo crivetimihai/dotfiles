@@ -31,6 +31,8 @@ bindkey  "^W"      vi-backward-kill-word
 bindkey  "^[[1~"   beginning-of-line
 bindkey  "^[[4~"   end-of-line
 
+# Setup man PAGER and less settings. Use -X to avoid clearning screen
+export LESS="-iMFXRj4a"
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
 export LESS_TERMCAP_md=$'\E[1;36m'     # begin blink
 export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
