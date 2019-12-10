@@ -1,12 +1,16 @@
 # Customizations
-export EDITOR=nvim
+export EDITOR=vim
 export VIEWER=micro
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export COLORTERM=truecolor
 
 # Aliases
 alias vboxmanage='VBoxManage'
-alias vim='nvim'
+alias vim='vim'
 alias c='clear'
 alias m='micro'
+alias emacs='flatpak run org.gnu.emacs/x86_64/stable'
 
 # Set the PATH
-export PATH=$HOME/bin:$HOME/go/bin:$HOME/node_modules/.bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/bin:$HOME/go/bin:$HOME/node_modules/.bin:/usr/local/bin:$PATH
