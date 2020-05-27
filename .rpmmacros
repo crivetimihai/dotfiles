@@ -1,4 +1,4 @@
-%packager Mihai Criveti
+%packager Your Name
 
 %_topdir %(echo $HOME)/rpmbuild
 
